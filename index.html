@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renz Collin D. Capeña | Web Developer Portfolio</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Icons (Bootstrap Icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="home">
+    <!-- Header / Navbar -->
+    <header class="navbar-container shadow-sm">
+      <nav class="navbar navbar-expand-lg container py-3">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <ul class="navbar-nav align-items-lg-center gap-lg-3 mb-3 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#works">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button
+              id="themeToggle"
+              class="btn btn-outline-secondary btn-sm rounded-pill d-flex align-items-center gap-2"
+              type="button"
+              aria-label="Toggle dark mode"
+            >
+              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+              <span class="theme-toggle-label">Dark</span>
+            </button>
+            <a
+              href="mailto:renzcollincapena01@gmail.com"
+              class="btn btn-dark rounded-pill ms-lg-3"
+            >
+              <i class="bi bi-chat-dots me-1" aria-hidden="true"></i>
+              Let's Talk
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section py-5 py-lg-6" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <p class="hero-kicker mb-2">Full Stack Web Developer</p>
+              <h1 id="hero-title" class="hero-title mb-3">
+                Hey <span class="wave">👋</span> I'm
+                <span class="hero-name">Renz Collin</span>
+              </h1>
+              <div class="hero-role badge rounded-pill mb-3">
+                <span class="hero-role-label" id="roleText"></span>
+                <span class="hero-role-cursor">|</span>
+              </div>
+              <p class="hero-text mb-4">
+                I am a passionate Full Stack Developer with a strong eagerness
+                to learn and adapt to new technologies. I enjoy exploring
+                innovative solutions and building reliable systems that solve
+                real business problems.
+              </p>
+              <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                <a href="#works" class="btn btn-primary hero-cta">
+                  Hire Me Now
+                  <i class="bi bi-arrow-up-right ms-1" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="./assets/Capeña_Renz_Collin.pdf"
+                  class="btn btn-outline-secondary hero-cta-secondary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="bi bi-file-earmark-text me-1" aria-hidden="true"></i>
+                  Download Resume
+                </a>
+                <div class="d-flex align-items-center gap-2 social-links">
+                  <a
+                    href="https://www.linkedin.com/in/renz-collin-cape%C3%B1a-b233b2245/"
+                    class="social-icon"
+                    aria-label="Visit my LinkedIn profile"
+                  >
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Renz-Capena"
+                    class="social-icon"
+                    aria-label="Visit my GitHub profile"
+                  >
+                    <i class="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-visual-wrapper">
+                <div class="hero-card">
+                  <div class="hero-card-glow"></div>
+                  <div class="hero-photo">
+                    <img
+                      src="./assets/profile-placeholder.png"
+                      alt="Portrait of Dalton, Web Developer"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills / Services Section -->
+      <section id="skills" class="section-padding section-animated">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <p class="section-kicker">What I Do</p>
+            <h2 class="section-title">Services & Skills</h2>
+            <p class="section-subtitle">
+              I design, build, and maintain full stack web applications using
+              modern PHP, JavaScript, and database technologies.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <article class="card skill-card h-100">
+                <div class="card-body">
+                  <div class="icon-badge mb-3">
+                    <i class="bi bi-window-sidebar"></i>
+                  </div>
+                  <h3 class="h5 mb-2">Frontend Development</h3>
+                  <p class="mb-3">
+                    Building responsive and accessible interfaces with HTML,
+                    CSS, Bootstrap, JavaScript, jQuery, and React JS.
+                  </p>
+                  <p class="tagline mb-0">HTML · CSS · Bootstrap · React JS</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card skill-card h-100">
+                <div class="card-body">
+                  <div class="icon-badge mb-3">
+                    <i class="bi bi-hdd-network"></i>
+                  </div>
+                  <h3 class="h5 mb-2">Backend & Databases</h3>
+                  <p class="mb-3">
+                    Developing secure server-side functionality and data flows
+                    using PHP, Laravel, MySQL, AJAX, and JSON.
+                  </p>
+                  <p class="tagline mb-0">PHP · Laravel · MySQL · AJAX · JSON</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card skill-card h-100">
+                <div class="card-body">
+                  <div class="icon-badge mb-3">
+                    <i class="bi bi-stars"></i>
+                  </div>
+                  <h3 class="h5 mb-2">Tools & Workflow</h3>
+                  <p class="mb-3">
+                    Managing deployments, collaborating with teams, and keeping
+                    projects organized using Git, FileZilla, XAMPP, and MySQL
+                    Workbench.
+                  </p>
+                  <p class="tagline mb-0">Git · FileZilla · XAMPP · Workbench</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works / Projects Section -->
+      <section id="works" class="section-padding bg-subtle section-animated">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <p class="section-kicker">Selected Work</p>
+            <h2 class="section-title">Projects & Case Studies</h2>
+            <p class="section-subtitle">
+              A curated selection of products, websites, and experiments I have
+              designed and built.
+            </p>
+          </div>
+
+          <div
+            id="projectsGrid"
+            class="row g-4"
+            aria-label="Projects I have worked on"
+          >
+            <!-- Project cards will be injected here via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume / Experience Section -->
+      <section id="resume" class="section-padding section-animated">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <p class="section-kicker">Experience</p>
+            <h2 class="section-title">Resume Snapshot</h2>
+            <p class="section-subtitle">
+              A quick overview of my professional experience and education.
+              You can also download my full resume below.
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-10">
+              <div class="timeline">
+                <article class="timeline-item">
+                  <div class="timeline-badge"></div>
+                  <div class="timeline-content">
+                    <h3 class="h5 mb-1">
+                      Jr. Developer · Atlantis Systems Technologies Filipinas Corp.
+                    </h3>
+                    <p class="timeline-meta mb-2">
+                      2024 — 2026
+                    </p>
+                    <p class="mb-0">
+                      Developed and maintained dynamic web applications using
+                      PHP, JavaScript, jQuery, and MySQL. Designed responsive
+                      UIs with Bootstrap, optimized database operations with
+                      MySQL Workbench, and managed deployments using Git,
+                      FileZilla, and XAMPP.
+                    </p>
+                  </div>
+                </article>
+                <article class="timeline-item">
+                  <div class="timeline-badge"></div>
+                  <div class="timeline-content">
+                    <h3 class="h5 mb-1">
+                      System Programmer · Filipinas Multi-line
+                    </h3>
+                    <p class="timeline-meta mb-2">
+                      2023 — 2024
+                    </p>
+                    <p class="mb-0">
+                      Utilized JSON, jQuery, and PHP to develop and enhance web
+                      and desktop applications. Upgraded existing systems,
+                      created system flows and mockups, prepared user manuals,
+                      and provided end-user training and technical support.
+                    </p>
+                  </div>
+                </article>
+                <article class="timeline-item">
+                  <div class="timeline-badge"></div>
+                  <div class="timeline-content">
+                    <h3 class="h5 mb-1">
+                      Intern Web Developer · Department of Education
+                    </h3>
+                    <p class="timeline-meta mb-2">
+                      2023
+                    </p>
+                    <p class="mb-0">
+                      Built responsive web applications using HTML, CSS,
+                      Bootstrap, JavaScript, jQuery, and AJAX. Developed and
+                      maintained inventory and profiling systems and supported
+                      the ICT unit with day-to-day technical tasks.
+                    </p>
+                  </div>
+                </article>
+                <article class="timeline-item">
+                  <div class="timeline-badge"></div>
+                  <div class="timeline-content">
+                    <h3 class="h5 mb-1">
+                      B.S. in Information Technology · Our Lady of Lourdes College
+                    </h3>
+                    <p class="timeline-meta mb-2">
+                      2019 — 2023
+                    </p>
+                    <p class="mb-0">
+                      Completed a Bachelor of Science in Information Technology,
+                      building a foundation in software development, databases,
+                      and web technologies.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="d-flex justify-content-center mt-4">
+                <a
+                  href="./assets/Capeña_Renz_Collin.pdf"
+                  class="btn btn-outline-secondary hero-cta-secondary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="bi bi-file-earmark-text me-1" aria-hidden="true"></i>
+                  View Full Resume (PDF)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section-padding bg-subtle section-animated">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <p class="section-kicker">Let's Talk</p>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">
+              Have a project, collaboration, or opportunity in mind? Reach out
+              directly using the details below.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="card contact-card h-100">
+                <div class="card-body d-flex flex-column gap-3">
+                  <h3 class="h5 mb-1">Work With Me</h3>
+                  <p class="mb-2">
+                    I am open to full-time roles, freelance projects, and
+                    collaboration opportunities related to web development.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a
+                      href="mailto:renzcollincapena01@gmail.com"
+                      class="btn btn-primary"
+                    >
+                      <i class="bi bi-envelope me-1" aria-hidden="true"></i>
+                      Email Me
+                    </a>
+                    <a
+                      href="tel:09615819149"
+                      class="btn btn-outline-secondary"
+                    >
+                      <i class="bi bi-telephone me-1" aria-hidden="true"></i>
+                      Call or Text
+                    </a>
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Prefer async? Send me an email with a short description of
+                    your project, timeline, and budget, and I will reply as soon
+                    as possible.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 ms-lg-auto">
+              <div class="card contact-card h-100">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Quick Info</h3>
+                  <ul class="list-unstyled mb-0 contact-list">
+                    <li class="d-flex align-items-center mb-3">
+                      <i class="bi bi-geo-alt contact-icon"></i>
+                      <div>
+                        <p class="mb-0 fw-semibold">Location</p>
+                        <p class="mb-0">
+                          Blk 24 Lot 24 Northville 1B Punturin, Valenzuela City
+                        </p>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                      <i class="bi bi-envelope contact-icon"></i>
+                      <div>
+                        <p class="mb-0 fw-semibold">Email</p>
+                        <p class="mb-0">renzcollincapena01@gmail.com</p>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                      <i class="bi bi-telephone contact-icon"></i>
+                      <div>
+                        <p class="mb-0 fw-semibold">Phone</p>
+                        <p class="mb-0">0961 581 9149</p>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <i class="bi bi-linkedin contact-icon"></i>
+                      <div>
+                        <p class="mb-0 fw-semibold">LinkedIn</p>
+                        <p class="mb-0">
+                          <a
+                            href="https://www.linkedin.com/in/renz-collin-cape%C3%B1a-b233b2245/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            /renz-collin-capeña
+                          </a>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0 small">
+          © <span id="year"></span> All rights reserved.
+        </p>
+        <div class="d-flex gap-3 small">
+          <a href="#home" class="text-decoration-none">Back to top</a>
+          <a href="#works" class="text-decoration-none">View my work</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (Bundle) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="./main.js"></script>
+  </body>
+  </html>
+
