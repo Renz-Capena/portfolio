@@ -94,7 +94,7 @@ const projects = [
   {
     title: 'ONLINE SHOPPING AQUARIA ECOMMERCE',
     description:
-      'Online shopping site for Aquaria where customers can browse products, place orders, and manage their accounts.',
+      'Aquaria Online Shopping is an e-commerce platform where guests can purchase Aquaria Water Park tickets and resort vouchers online.',
     techStack: [
       'PHP',
       'HTML',
@@ -111,7 +111,7 @@ const projects = [
   {
     title: 'BELLEVUE PREMIER CLUB',
     description:
-      'A hotel loyalty web system for Anya Elite where guests can earn, track, and redeem points through an online portal.',
+      'Bellevue Premier Club is an exclusive membership platform by The Bellevue Hotels & Resorts that provides members with special privileges such as dining discounts, accommodation deals, and other exclusive rewards.',
     techStack: [
       'PHP',
       'HTML',
