@@ -162,12 +162,12 @@ body.dark-theme .navbar-toggler-icon {
 .hero-section::after {
   content: '';
   position: absolute;
-  border-radius: 999px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   filter: blur(40px);
   opacity: 0.8;
   pointer-events: none;
   mix-blend-mode: screen;
-  animation: float-orbit 18s infinite alternate ease-in-out;
+  animation: morph-float 18s infinite ease-in-out;
 }
 
 .hero-section::before {
@@ -310,12 +310,12 @@ body.dark-theme .navbar-toggler-icon {
   position: relative;
   max-width: 380px;
   width: 100%;
-  border-radius: var(--radius-xl);
+  border-radius: 42% 58% 55% 45% / 48% 52% 48% 52%;
   background-color: var(--accent);
   padding: 0.6rem;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  animation: float-card 6s ease-in-out infinite;
+  animation: morph-card 12s ease-in-out infinite;
 }
 
 .hero-card-glow {
@@ -332,9 +332,10 @@ body.dark-theme .navbar-toggler-icon {
 
 .hero-photo {
   position: relative;
-  border-radius: calc(var(--radius-xl) - 6px);
+  border-radius: 38% 62% 52% 48% / 46% 54% 46% 54%;
   overflow: hidden;
   background: #f9fafb;
+  animation: morph-inner 12s ease-in-out infinite;
 }
 
 body.dark-theme .hero-photo {
@@ -368,6 +369,53 @@ body.dark-theme .hero-photo {
   }
 }
 
+/* Gentle morphing blob: rounded shapes that slowly shift and move */
+@keyframes morph-float {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate3d(12px, -10px, 0) scale(1.03);
+  }
+  50% {
+    border-radius: 50% 50% 50% 50% / 45% 55% 45% 55%;
+    transform: translate3d(-8px, 14px, 0) scale(0.98);
+  }
+  75% {
+    border-radius: 40% 60% 40% 60% / 70% 30% 70% 30%;
+    transform: translate3d(6px, 6px, 0) scale(1.02);
+  }
+}
+
+@keyframes morph-card {
+  0%, 100% {
+    border-radius: 42% 58% 55% 45% / 48% 52% 48% 52%;
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    border-radius: 55% 45% 42% 58% / 52% 48% 52% 48%;
+    transform: translateY(-6px) rotate(1deg);
+  }
+  66% {
+    border-radius: 48% 52% 58% 42% / 45% 55% 45% 55%;
+    transform: translateY(4px) rotate(-0.5deg);
+  }
+}
+
+@keyframes morph-inner {
+  0%, 100% {
+    border-radius: 38% 62% 52% 48% / 46% 54% 46% 54%;
+  }
+  33% {
+    border-radius: 52% 48% 38% 62% / 54% 46% 54% 46%;
+  }
+  66% {
+    border-radius: 46% 54% 54% 46% / 62% 38% 62% 38%;
+  }
+}
+
 @keyframes float-card {
   0%,
   100% {
@@ -396,12 +444,12 @@ body.dark-theme .hero-photo {
 .section-animated::after {
   content: '';
   position: absolute;
-  border-radius: 999px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   filter: blur(40px);
   opacity: 0.5;
   pointer-events: none;
   mix-blend-mode: soft-light;
-  animation: float-orbit 22s infinite alternate ease-in-out;
+  animation: morph-float 22s infinite ease-in-out;
   z-index: -1;
 }
 
@@ -684,10 +732,6 @@ body.dark-theme .contact-card .text-muted {
 
   .hero-title {
     font-size: 2.2rem;
-  }
-
-  .hero-visual-wrapper {
-    display: none;
   }
 }
 
