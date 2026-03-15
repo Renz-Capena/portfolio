@@ -639,6 +639,10 @@ body.dark-theme .project-tag {
   color: var(--text);
 }
 
+body.dark-theme .contact-card .text-muted {
+  color: #fff !important;
+}
+
 .contact-list .contact-icon {
   font-size: 1.25rem;
   margin-right: 0.8rem;
